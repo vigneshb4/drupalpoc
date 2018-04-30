@@ -41,6 +41,12 @@ public class DrupalController {
 		return courseService.getStudentNewCourses();
 	}
     
+    @RequestMapping(value = "/student/dissertationcourse", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON)
+    public @ResponseBody Object  getStudentDissertationCourses() {
+		return courseService.getDissertationCourse();
+	}
+    
+    
     @RequestMapping(value = "/finance/financialaid", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON)
     public @ResponseBody Object  getFinancialAid() {
 		return financeService.getFinancialAid();
